@@ -19,34 +19,42 @@ This is a template for **business documents in Japanese**.
 ## 関数
 
 このテンプレートが提供する `jabiz` 関数は、以下の名前付き引数を持ちます。
+`none`とするとその項目を削除できます。
 
 ### 基本情報
 
 | 引数名 | 型 | 説明 | デフォルト値 |
 | --- | --- | --- | --- |
-| date | content, string, datetime | 日付 | datetime.today() |
-| to | content, string | 宛先 | [宛先] |
-| from | content, string | 発信者 | [発信者] |
-| title | content, string | タイトル | [タイトル] |
-| tougo | content, string | 頭語 | [拝啓] |
-| ketsugo | content, string | 結語 | [敬具] |
-| kigaki | content, string | 記書き | none |
-| contact | content, string | 連絡先、担当者など | none |
+| date | `content`, `string`, or `datetime` | 日付 | datetime.today() |
+| to | `content` or `string` | 宛先 | [宛先] |
+| from | `content` or `string` | 発信者 | [発信者] |
+| title | `content` or `string` | タイトル | [タイトル] |
+| tougo | `content` or `string` | 頭語 | [拝啓] |
+| ketsugo | `content` or `string` | 結語 | [敬具] |
+| kigaki | `content` or `string` | 記書き | none |
+| contact | `content` or `string` | 連絡先、担当者など | none |
 
 ### フォント
 
 | 引数名 | 型 | 説明 | デフォルト値 |
 | --- | --- | --- | --- |
-| font-title | string, list | タイトルのフォント。サンセリフ体、ゴシック体などの指定を推奨。 | "Noto Sans CJK JP" |
-| font-main | string, list | 本文のフォント。セリフ体、明朝体などの指定を推奨。 | "Noto Serif CJK JP" |
-| size-title | size | タイトルのフォントサイズ | 18pt |
-| size-main | size | 本文のフォントサイズ | 10pt |
+| font-title | `string`, `array`, or `dictionary` | タイトルのフォント。サンセリフ体、ゴシック体などの指定を推奨。 | "Noto Sans CJK JP" |
+| font-main | `string`, `array`, or `dictionary` | 本文のフォント。セリフ体、明朝体などの指定を推奨。 | "Noto Serif CJK JP" |
+| size-title | `length` | タイトルのフォントサイズ | 18pt |
+| size-main | `length` | 本文のフォントサイズ | 10pt |
+
+Notoフォントがインストールされていない場合には、インストールしてください。
+Ubuntuなどの場合にはNotoフォントは以下のコマンドでインストールできます。
+
+```
+sudo apt install fonts-noto-cjk
+```
 
 ### 外観
 
 | 引数名 | 型 | 説明 | デフォルト値 |
 | --- | --- | --- | --- |
-| page-number | string | ページ番号のフォーマット | none |
+| page-number | `string` | ページ番号のフォーマット | none |
 
 ## 呼び出し例
 
