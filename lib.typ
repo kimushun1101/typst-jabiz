@@ -1,6 +1,8 @@
 // MIT No Attribution
 // Copyright 2025 Shunsuke Kimura
 
+#import "@preview/cjk-unbreak:0.1.1": remove-cjk-break-space
+
 #let jabiz(
   // 基本情報
   title: [タイトル],
@@ -60,7 +62,7 @@
   // 本文
   if tougo != none { tougo }
   set par(first-line-indent: 1em)
-  body
+  remove-cjk-break-space(body)
   if ketsugo != none { align(right, ketsugo) }
 
   // 記書き
@@ -68,7 +70,7 @@
     v(3em, weak: true)
     align(center, text(size-main*1.2)[記])
     v(2em, weak: true)
-    kigaki
+    remove-cjk-break-space(kigaki)
     v(1em, weak: true)
     align(right, [以上])
   }
