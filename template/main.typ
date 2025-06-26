@@ -1,7 +1,8 @@
 // MIT No Attribution
 // Copyright 2025 Shunsuke Kimura
 
-#import "@preview/jabiz:0.1.0": jabiz
+#import "@preview/jabiz:0.1.1": jabiz
+// #import "../lib.typ": jabiz  // for development
 
 // この文書特有の関数を定義
 // 赤字で警告する

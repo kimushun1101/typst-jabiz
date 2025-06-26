@@ -62,7 +62,7 @@ sudo apt install fonts-noto-cjk
 引数を省略した場合には、デフォルト値で設定されます。
 
 ```typ
-#import "@preview/jabiz:0.1.0": jabiz
+#import "@preview/jabiz:0.1.1": jabiz
 
 // この文書特有の関数を定義
 // 赤字で警告する
