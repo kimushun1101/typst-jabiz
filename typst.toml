@@ -12,7 +12,6 @@ description = "Template for Japanese business documents. 日本語のビジネ�
 keywords = ["Japanese", "business"]
 disciplines = ["business"]
 categories = ["office"]
-exclude = ["example.typ", ".gitignore", ".typos.toml"]
 
 [template]
 path = "template"
