@@ -53,7 +53,7 @@
   }
 
   // タイトル
-  if title == none {
+  if title != none {
     v(size-title*2, weak: true)
     align(center, text(size-title, font: font-title, weight: "bold", title))
     v(size-title*2, weak: true)
