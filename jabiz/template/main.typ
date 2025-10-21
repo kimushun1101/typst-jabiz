@@ -1,7 +1,7 @@
 // MIT No Attribution
 // Copyright 2025 Shunsuke Kimura
 
-#import "@preview/jabiz:0.1.1": jabiz
+#import "@preview/jabiz:0.1.2": jabiz
 
 // この文書特有の関数を定義
 // 赤字で警告する
