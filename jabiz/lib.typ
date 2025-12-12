@@ -1,7 +1,7 @@
 // MIT No Attribution
 // Copyright 2025 Shunsuke Kimura
 
-#import "@preview/cjk-unbreak:0.1.1": remove-cjk-break-space
+#import "@preview/cjk-unbreak:0.2.1": remove-cjk-break-space
 
 #let jabiz(
   // 基本情報
