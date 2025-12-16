@@ -1,11 +1,5 @@
 #import "@preview/jabiz:0.1.3": jabiz
 
-// この文書特有の関数を定義
-// 赤字で警告する
-#let warn(it) = text(it, fill: rgb(red), weight: "bold")
-// リンクを青文字にする
-#show link: set text(fill: blue)
-
 // デフォルト値でよい引数は省略可能
 #show: jabiz.with(
   date: [2025年12月17日],
