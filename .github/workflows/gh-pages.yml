@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  TYPST_INPUT: tests/test-compile-doc.typ
+  OUTPUT_PDF: ${{ github.event.repository.name }}-example.pdf
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}${{ env.OUTPUT_PDF }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CJK Typst compile steps
+        uses: ./.github/actions/typst-steps
+        with:
+          input_file: ${{ env.TYPST_INPUT }}
+          output_file: ${{ env.OUTPUT_PDF }}
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
